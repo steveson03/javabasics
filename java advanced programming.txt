@@ -1,0 +1,478 @@
+package com.programming;
+
+import java.util.Scanner;
+
+//we can create many classes as we want.inside that we create method and inside method we create variables.
+class newclass{//we create new class
+        void useme(){//we create new method
+
+        System.out.println("just use me");
+    }
+
+    int add(int a ,int b){
+
+        return a+b;
+    }
+}
+
+class dog{
+    int age;
+    String color;
+
+    void run(){
+
+        System.out.println("the dog is running good ");
+    }
+}
+
+//this keyword
+
+class This{
+    int number1;
+
+     This(int number1) {
+         this.number1 = number1;//this keyword is use to identify the variable given above.
+    }
+}
+
+
+//static method
+class student{
+    int rollno;
+     static int standard;//we can also make standard as fixed object.
+   static String principal;//we use static here for fixed name.
+}
+
+
+
+
+//inheritance
+class add{//class add is a super class or parent class
+    add(){//we using this as a default constructor.
+
+    }
+
+    add(int a, int b){//we creating a method inside the class.
+
+        System.out.println(a+b);
+    }
+    void run(){
+        System.out.println("this is the void method");
+
+    }
+
+}
+
+class sub extends add{//we use extends as a keyword for inheritance and add is use as a sub class
+    //we didn't write anything inside this subclass.
+    //if we write the code
+    void run2(){
+
+        System.out.println("this is the void method 2");
+    }
+}
+class mul extends sub{//if we use add instead of sub it is know as hierarchical inheritance
+    //we even didn't write anything inside this class also.
+}//class add is the super class, class sub is the sub class, class mul is used as the multiple class.
+//multi level inheritance is not working in java we cant give class mul extends sub, add.
+
+//super keyword
+
+class a{
+     a(){//default constructor
+         System.out.println("super keyword is use to fetch the data in super class");
+     }
+     a(int i,int j){
+         System.out.println("we pass parameter ");
+     }
+}
+class b extends a{
+    b(){//default constructor
+        System.out.println("This is sub class");
+    }
+    b(int j){
+        super(j,j);
+     //we use super keyword to fetch data in super class.
+        System.out.println("parameter");
+
+    }
+}
+
+
+//method overriding
+
+      class c{
+    void display(){
+        System.out.println("method overriding is used to override the data in the parent class mostly");
+    }
+      }
+
+      class d extends c {
+          @Override
+              // As we use this override to know that we are using the override.
+          void display() {
+              System.out.println("method overriding");
+          }
+          }
+      class f extends d {
+          @Override
+          void display() {
+              System.out.println("overriding");
+          }
+      }
+
+
+//Encapsulation
+
+      class data {
+          private int id;
+          private String password;
+
+
+          int getId() {
+
+              return id;
+          }
+
+          //this is known as setters and getter.
+          // if want to get setters and getters press right click and click generate and click getters and setters.
+
+        public String getPassword() {
+              return password;
+          }
+         public void setPassword(String password) {
+              this.password = password;
+          }
+
+          void setId(int id) {
+
+              this.id = id;
+
+          }
+      }
+
+//polymorphism
+               //two types
+            //1. static - method overload - compile time.
+            //2. dynamic - method override - run time.
+
+//abstract
+    abstract class bike{//we using abstract keyword for hide things.
+    void run(){
+
+    }
+    abstract void running();//declaring
+
+}
+    class yamaha extends bike{//concrete class  it means unchangeable.
+
+    void running(){//define
+        System.out.println("its running");
+    }
+
+
+}
+
+//final keyword
+//final keyword used in class,method.
+      class ram{
+         final void control(){
+            // String i = "steve";
+             System.out.println("steve");    //final keyword is use to not to override a data we perform before.
+    }
+    class raju extends ram{
+
+
+
+}
+    }
+
+
+
+//package and imports
+     //the codes are in the rough.java.
+
+//Exception handling
+
+      //we  can use exception handling to try something new if it gives error or not.
+
+
+//interface
+             //API = APPLICATION PROGRAMMING INTERFACE. mostly all company use this.
+            //multiple inheritance is not working in java but instead of that we use interface it do the same work as multiple inheritance.
+             //inheritance = extends keyword
+            //interface = implements keyword
+
+            interface one{//in every class we use the keyword class but in interface the keyword class is not support.
+               void m1();
+               public int m2();//we coudn't declared in interface we only define it like abstract.
+            }
+            interface two{
+                       //we can create how many interface we want.
+            }
+            class three implements one,two {
+                public void m1() {
+                    System.out.println("interface");
+                }
+
+                public int m2() {
+                    System.out.println("interface 2");
+                 return 0;
+                }
+            }
+
+//inner class
+//we see how we can create a class inside another class.
+        class s{
+         void steve(){
+                System.out.println("stevenson");
+            }
+            class w{
+             void william(){
+                 System.out.println("william jerald");
+             }
+            }
+        }
+
+
+
+          public class Main {
+
+              public static void main(String[] args) {
+                  System.out.println("HELLO");
+                  methodOne();//calling method
+                  System.out.println(methodTwo());
+                  System.out.println(methodThree(33, 45));//these are arguments
+                  //what ever code you write below main method it can be run only u put the variable in the main method.
+                  subtract(34, 12);
+                  add(14, 33, 34.3);
+
+
+                  int row = 7;
+                  //int column =7;
+                  for (int count = 1; count <= row; count++) {
+
+                      for (int space = 1; space <= (row - count); space++) {
+
+                          System.out.print(" ");
+                      }
+                      for (int counted = 1; counted <= count; counted++) {
+
+                          System.out.print(counted + " ");
+                      }
+                      System.out.println();
+                  }
+
+
+                  //mostly asked in interviews.
+                  //int row = 5;//we can also get the input from the user by using scanner keyword. int row;
+                  //then use scanner .
+                  //int column = 5;
+                  //for (int count = 1; count <= row; count++) { //row
+//if you want to make a space in front like // 1
+                  //  12
+                  //    123
+                  //     1234 you must use the code below in the comments
+                  //for(int space = 1; space<=count; space){
+
+                  // System.out.println(" ");
+                  //}
+
+                  //for (int counted = 1; counted <= count; counted++) {//column
+                  //if you want to print reverse like  11111 you must change the condition (int counted = row; counted>=count; counted--)
+                  //2222
+                  //333
+                  //44
+                  //5
+                  //  System.out.print(counted);
+                  //}
+                  //  System.out.println();//we must use this sout to show the output correct.
+                  //}
+                  for(int revcount = row;revcount>=1;revcount--){
+                  for (int revcounted = 1; revcounted <= revcount; revcounted++) {
+                     System.out.print(revcounted);// we can also use symbols and words.
+                   }
+                     System.out.println();
+                   }
+
+
+                  //inner class
+
+                  s always = new s();
+                  always.steve();
+
+                  s.w execute = always.new w();//we only using this inner class with this syntax.
+                  execute.william();
+
+//interface
+                  three stands = new three();
+                  stands.m1();
+                  stands.m2();
+
+
+//Exception handling
+
+                  //there are two main keywords try() and catch().
+                  //and there two more keywords finally and throw.
+                  try {//try keyword is used to try something new.
+                      int number;
+                      System.out.println("Enter the number: ");
+                      Scanner input = new Scanner(System.in);
+                      number = input.nextInt();
+                      System.out.println(number);
+                  } catch (Exception f) {//if the written code was wrong in try keyword then catch keyword will give the output.
+
+                      System.out.println("only numbers are used");
+
+                  } finally {//the things inside the try is correct or not finally keyword is execute.
+                      System.out.println("always execute");
+                  }
+
+                  //throw
+                  try {
+                      int num = 101;
+                      if (num == 10) //we throw the condition if its correct the output appears what we written in the catch keyword.
+                          throw new Exception();
+                  } catch (Exception e) {
+                      System.out.println("yes");
+                  }
+
+
+//package and imports
+                  rough three = new rough();
+                  three.display2();
+                  //we can use the  new class with the same package name
+                  // we can use the different packages but we must import the new package in to the existing one.
+                  // and we must use the public keyword in front of the method.
+                  //import.com.programming.New.dummy.
+                  //new package name , class name.
+
+
+//final keyword
+                  ram ok = new ram();
+                  ok.control();
+
+
+//abstract
+
+                  bike two = new yamaha();
+                  two.run();
+                  two.running();
+
+
+//Encapsulation
+
+                  data one = new data();
+                  one.setId(12345);
+                  one.getId();
+                  System.out.println(one.getId());
+
+                  data en = new data();
+                  en.setPassword("cool");
+                  en.getPassword();
+                  System.out.println(en.getPassword());
+
+//method overriding
+
+                  f objc = new f();
+                  objc.display();
+
+//super keyword
+                  b obj = new b(8);
+
+
+//inheritance
+                  add addition = new add(3, 1);
+                  addition.run();
+
+                  sub s = new sub();//this is single level inheritance.
+                  s.run();//we can use the add class with sub class it is know as single level inheritance.
+
+                  mul a = new mul();
+                  a.run2();//it shows what is written in the void run.
+
+//class
+                  //we creating a object for the class above
+                  newclass object = new newclass();
+                  object.useme();
+                   //object.add(23, 45);
+
+              System.out.println(object.add(23, 45));
+
+
+                  dog pomerian = new dog();
+                  pomerian.age = 2;
+                  pomerian.color = "white";
+
+                  dog lab = new dog();
+                  lab.age = 1;
+                  lab.color = "Black";
+
+                  System.out.println(pomerian.age);
+                  System.out.println(lab.color);
+
+                  lab.run();
+
+
+                  //this keyword print statement.
+                  This item = new This(3);
+                  System.out.println(item.number1);
+
+
+//static method
+                  student steve = new student();
+                  steve.rollno = 12343;
+                  student.standard = 12;
+                  student.principal = "Helen";
+
+
+                  System.out.println(student.principal);
+                  System.out.println(steve.rollno);
+                  System.out.println(student.standard);//we can make standard also fixed value.
+              }
+
+
+
+              //access modifiers
+              //private
+              //public
+              //protected
+              //private can be access in one class
+              //public can be access in any class
+              public static void methodOne() {
+
+                  System.out.println("method 1");
+
+              }
+
+              static int methodTwo() {
+
+                  return 4 + 4;
+              }
+              public static int methodThree(int num1, int num2) {//parameters are used inside the bracket
+
+                  return num1 + num2;
+              }
+//we can use many datatypes like int,float,double,string,char.
+
+
+              //method overloading
+
+              static void subtract(int num1) {//simply call the method name and u will get the output.
+
+                  System.out.println(num1 - num1);
+              }
+
+              static void subtract(int num1, int num2) {
+
+                  System.out.println(num1 - num2);
+              }
+
+              static void add(int num1, int num2, double num3) {
+
+                  System.out.println(num1 + num2 + num3);
+
+              }
+}
+
+

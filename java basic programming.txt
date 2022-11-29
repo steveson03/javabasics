@@ -1,0 +1,328 @@
+//package must be used in the java programming
+package com.hacker;
+
+import javax.script.ScriptEngineManager;
+import javax.swing.*;
+import java.lang.reflect.Array;
+import java.nio.charset.StandardCharsets;
+import java.sql.SQLOutput;
+import java.util.Arrays;
+import java.util.Locale;
+import java.util.Scanner;
+
+//classes are with in the package and we must use class in the java programming.
+interface  a {
+	void display();
+}
+interface  c
+{
+	void  sum();
+}
+interface  d
+{
+	void echo();
+}
+class b implements a,c,d {
+	public void display()
+	{
+		System.out.println("sanjay");
+	}
+	public  void sum()
+	{
+		System.out.println("sathish");
+	}
+	public void echo()
+	{
+		System.out.println("william");
+	}
+}
+
+public class Main {
+
+	//methods are within the class and we must use methods in java programming.
+    public static void main(String[] args) {
+    	// primitive datatypes
+		byte number = 55;
+		short number2 = 134;
+		int number3 = 234154565;
+		long number4 = 367265947L;
+		double number5 = 2341877.123;
+		float number6 = 12.3F;
+		boolean bool = true;
+		char alphabet = 's';
+b as = new b();
+		as.sum();
+        b us = new b();
+        as.display();
+        as.echo();
+
+
+		System.out.println(bool);
+		System.out.println(number);
+		System.out.println(number3);
+		System.out.println(alphabet);
+		System.out.println(number6);
+		System.out.println("steve");
+
+// reference datatypes
+		//arrays
+		int a[] = {1,2,3,4,5,6,7};
+		System.out.println(Arrays.toString(a));
+		//two dimentional array
+		int numberOf3dim[][] = { {1,2},{2,3},{5,6,7} };
+		System.out.println(Arrays.toString(numberOf3dim));
+
+
+
+
+		int [] b = new int[35];
+		b[0] = 21;
+		b[1] = 11;
+//characters
+		// char variable name must be start with characters not with numbers
+		char c [] = { 'f','e','i'};
+		// int len is used to see the length of the character
+		int len = c.length;
+		//clone is used to show the other variable name values
+
+		char d [] = c.clone();
+
+		// sout is used to see the output of the program
+		System.out.println(Arrays.toString(b));
+		System.out.println(Arrays.toString(d));
+		System.out.println(len);
+
+
+
+
+//strings
+		System.out.println("American college");
+		String name = "STEVENSON" + " comments are very useful ";
+
+        //there are more methods in  this string if u give the variable name in the sout  and type . u can see several type of methods
+		//and u can use it
+		System.out.println(name.endsWith(" "));
+		System.out.println(name.trim());
+
+
+//Naming
+		//methods
+		//public static void main(String[] args){
+		//public static voidShoppingMall (string[] args){
+		//methods are camel Naming Convention first letter must be small and next words first letters are must be capital
+
+
+
+		//variables
+		//int number = 10; (normal variable)
+		//int numberSevenStudent =11; (using camel Naming Convention )
+		//methods and vaiables are same
+
+		//classes
+		//public class Main {
+		//public class SubjectName {
+		//classes using Pascal Naming Convention starting letters must be caps.
+
+
+//constents
+        //normal coding
+        byte number11 = 4;
+        number11 = 5;
+		System.out.println(number11);
+
+		//using constent with the keyword "final".
+		final int ageOfPerson = 18;
+		//ageOfPerson = 20;
+		//if we use the keyword final then we couldn't change the value
+
+
+//java operators
+//  +,-,%,*,<,>,=,+=,-=,*=,/=,%=
+		int person1 = 20;
+		int person2 = 30;
+		System.out.println(person1 + person2);
+		//int person4 = person1 + person2;
+		//person2 = person2 + 10;
+		//easy way
+		person2 += 10;
+		System.out.println(person2);
+		//BODMAS (B - Bracket, O - power value, D - division,  M - multiplication, A - addition, S - subtraction.)
+		int person5 = (5+4) -32*3*4+32-2*2;
+		System.out.println(person5);
+
+//logical operators  & , | , !
+		int ageLimit = 19;
+		boolean indiancitizen = false;
+
+		System.out.println(ageLimit == 19 && indiancitizen == true);//both the statement wants to be correct otherwise it will become false.
+		System.out.println(ageLimit == 18 || indiancitizen ==  true); //if any one of the statement is true it is true.
+		System.out.println( !indiancitizen == true );//it reverse the condition.
+//ternary operator
+		String Limit = ageLimit >= 18 ? "eligible" : " not eligible";
+		System.out.println(Limit);
+
+//increament and decreament (post increament comes after the variable and pre increament comes before the variable)
+		int man = 10;
+		int woman = 12;
+		//man ++ //post increament
+		//--woman; // pre decreament
+		int variable1 =  man ++ ;
+
+		System.out.println(man);
+		System.out.println(woman);
+		System.out.println(variable1);
+
+//Math
+
+        int market1 = 124;
+        float market2 = 145.23f;
+
+		System.out.println(Math.max(market1,market2));
+		System.out.println(Math.decrementExact(market1));
+		System.out.println(Math.getExponent(market2));
+
+        //if u type the Math in the output and type dot u can see many operation and u can perform it.
+
+
+//scanner
+
+		//it is used to collect the input from  the user.
+		int program;
+
+		Scanner input = new Scanner(System.in);//this line is important
+
+		System.out.println("enter a number : ");
+		program = input.nextInt();// this line is important
+
+
+		System.out.println("the entered number is  =   " + program );
+
+		//we also perform in string
+		String name1;
+		Scanner input1 = new Scanner(System.in);
+
+		System.out.println("enter a name : ");
+		name1 = input1.nextLine();
+//if you want to give multiple inputs use nextLine.
+		System.out.println("welcome    " +  name1 );
+
+
+//conditions
+		//if condition
+		int pen = 10;
+		int specialpen = 20;
+		int cost;
+
+		Scanner input2 = new Scanner(System.in);
+		System.out.println("How much money do you have  =  ");
+		cost = input2.nextInt();
+		if(cost > specialpen) {
+			System.out.println("you can buy a  specialpen ");
+		}
+
+		else if (cost > pen) {
+
+			System.out.println("you can buy a pen");
+		}
+		else {
+			System.out.println("you cant buy a pen with your money");
+		}
+
+//switch
+
+			int num = 12;
+			String people ;
+
+			Scanner input4 = new Scanner(System.in);
+		System.out.println("enter your name  :  ");
+			people = input4.nextLine();
+
+			switch (people) {
+				case "sanjay":
+					System.out.println("Hi , " + people);
+					break;
+				case "ronaldo":
+					System.out.println("Hi  ," + people);
+					break;
+				case "sathish":
+					System.out.println("Hi ," + people);
+					break;
+				case "willi":
+					System.out.println("hi ," + people);
+					break;
+
+				default:
+					System.out.println("your name is not in the list");
+			}
+
+
+//loops
+//for loop , while loop, do while loop, for each loop.
+
+
+		    //for loop
+            for (int property = 0 ;  property<7 ; property ++){
+				System.out.print(property);
+			}
+
+            //while loop
+		     int g= 4;
+            while (g > 0) {
+				System.out.println("aquaman");
+				g --;
+			}
+
+
+		//do while loop
+
+		    int f = 4;
+            do{
+				System.out.println("spider man ");
+				f --;
+            }
+            while (f > 0);
+
+
+
+        //for each loop - Arrays
+
+
+		     String vegetables[]= {"carrot" , "beans" , "tomato"};
+
+
+//this is for each loop
+		     for(String vegetable : vegetables) {
+				 System.out.println(vegetable);
+			 }
+
+//if we do that in for loop
+
+
+            // for (int i = vegetables.length-1;i>0;i--){
+			//	 System.out.println(vegetables[i]);
+			 }
+
+
+			}
+
+			//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
